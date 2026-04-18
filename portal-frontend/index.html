@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Técnica SEO: viewport correto melhora experiência mobile e ajuda em usabilidade/Core Web Vitals -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Técnica SEO: título único por página, atualizado dinamicamente via JavaScript -->
+    <title>Nossa Notícia - Últimas notícias</title>
+
+    <!-- Técnica SEO: descrição curta e objetiva da página, também atualizada dinamicamente -->
+    <meta name="description" content="Portal de notícias com política, esportes, finanças, tecnologia e cotidiano.">
+
+    <!-- Técnica SEO: controla indexação do conteúdo -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Técnica SEO: canonical evita conteúdo duplicado -->
+    <link rel="canonical" href="http://localhost/nome_do_portal/">
+
+    <!-- Técnica SEO/social: Open Graph melhora compartilhamento em WhatsApp, Facebook, LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Nome do Portal - Últimas notícias">
+    <meta property="og:description" content="Portal de notícias com política, esportes, finanças, tecnologia e cotidiano.">
+    <meta property="og:url" content="http://localhost/nome_do_portal/">
+    <meta property="og:image" content="http://localhost:8000/images/default-news.jpg">
+
+    <!-- Técnica SEO/social: Twitter/X cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nome do Portal - Últimas notícias">
+    <meta name="twitter:description" content="Portal de notícias com política, esportes, finanças, tecnologia e cotidiano.">
+    <meta name="twitter:image" content="http://localhost:8000/images/default-news.jpg">
+
+    <!-- Técnica SEO: dados estruturados JSON-LD; o conteúdo será trocado dinamicamente -->
+    <script type="application/ld+json" id="structured-data">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Nome do Portal",
+      "url": "http://localhost/nome_do_portal/"
+    }
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Técnica de encontrabilidade: header claro com marca e navegação visível -->
+    <header class="border-bottom bg-white sticky-top">
+        <nav class="navbar navbar-expand-lg container py-3" aria-label="Navegação principal">
+            <a class="navbar-brand fw-bold" href="/nossanoticia/" data-link id="portal-brand">Portal</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#portalMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="portalMenu">
+                <div class="navbar-nav ms-auto" id="category-menu"></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-3">
+        <!-- Técnica SEO/encontrabilidade: breadcrumb ajuda navegação do usuário e compreensão da hierarquia -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0" id="breadcrumb"></ol>
+        </nav>
+    </div>
+
+    <!-- Técnica SEO: uso de <main> e seções semânticas melhora estrutura do documento -->
+    <main class="container py-4" id="app"></main>
+
+    <!-- Sentinela do scroll infinito -->
+    <div id="scroll-sentinel" class="py-4 text-center">
+        <div class="spinner-border text-secondary d-none" id="scroll-loader" role="status"></div>
+    </div>
+
+    <footer class="border-top py-4 mt-5 bg-light">
+        <div class="container text-center small text-muted">
+            <span id="portal-footer-name">Portal</span> © 2026. Conteúdo demonstrativo.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/config.js?v=2"></script>
+    <script src="./assets/js/app.js?v=2"></script>
+</body>
+</html>
