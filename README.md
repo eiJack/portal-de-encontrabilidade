@@ -2,5 +2,5 @@
 - Cristiane Aparecida Barros Pereira  
 - Jackeline de Paula Lima  
 
-**Turma:** Sistema para Internet - 6º semestre
+**Turma:** Sistema para Internet - 6º semestre <br>
 **Matéria:** Encontrabilidade
